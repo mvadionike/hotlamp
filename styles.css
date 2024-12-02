@@ -1,0 +1,107 @@
+/* Стили для всего сайта */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Заголовок и меню */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #ff7e47;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Секция главной страницы с фоновым изображением */
+.home {
+    position: relative;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    background-image: url('lamp.jpg'); /* Устанавливаем фоновое изображение */
+    background-size: cover;  /* Изображение будет растягиваться, чтобы покрыть всю секцию */
+    background-position: center;  /* Центрируем изображение */
+    background-repeat: no-repeat;  /* Избегаем повторения изображения */
+    overflow: hidden;
+}
+
+/* Содержание секции .home */
+.home-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);  /* Тень для текста, чтобы улучшить видимость */
+}
+
+/* Общие стили для остальных секций */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Стили для футера */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background: #ff7e47;
+    color: #fff;
+}
+
+/* Добавление адаптивности для мобильных устройств */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content p {
+        font-size: 1.2rem;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
